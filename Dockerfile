@@ -32,13 +32,10 @@ RUN \
 RUN \
  mkdir -p \
 	/tmp/quassel-src/build && \
- if [ -z ${QUASSEL_RELEASE+x} ]; then \
-	QUASSEL_RELEASE=$(curl -sX GET "https://api.github.com/repos/quassel/quassel/releases/latest" \
-	| jq -r .tag_name); \
- fi && \
+ QUASSEL_RELEASE="0.14.0-dev" && \
  curl -o \
  /tmp/quassel.tar.gz -L \
-	"https://github.com/quassel/quassel/archive/${QUASSEL_RELEASE}.tar.gz" && \
+	"https://github.com/quassel/quassel/archive/d48c2331b38ae46732ac1ab9f35a3a0b85100f92.tar.gz" && \
  tar xf \
  /tmp/quassel.tar.gz -C \
 	/tmp/quassel-src --strip-components=1
