@@ -24,6 +24,7 @@ RUN \
 	make \
 	paxmark \
 	boost \
+	boost-dev \
 	qt5-qtbase-dev \
 	qt5-qtscript-dev \
 	qt5-qtbase-postgresql \
