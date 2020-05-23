@@ -23,7 +23,6 @@ RUN \
 	openldap-dev \
 	make \
 	paxmark \
-	boost \
 	boost-dev \
 	qt5-qtbase-dev \
 	qt5-qtscript-dev \
@@ -73,6 +72,8 @@ ENV HOME /config
 # install runtime packages
 RUN \
  apk add --no-cache \
+ 	bash \
+	boost \
 	icu-libs \
 	openssl \
 	qt5-qtbase \
