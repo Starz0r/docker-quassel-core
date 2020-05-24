@@ -83,6 +83,8 @@ RUN \
 
 # copy artifacts build stage
 COPY --from=build-stage /build/quassel/usr/bin/ /usr/bin/
+COPY --from=build-stage /build/quassel/usr/lib64/ /usr/lib64/
+COPY --from=build-stage /build/quassel/usr/lib64/ /usr/lib/
 
 # add local files
 COPY root/ /
